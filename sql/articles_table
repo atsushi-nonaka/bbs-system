@@ -1,0 +1,11 @@
+CREATE TABLE articles(
+	article_id serial primary key,
+	name varchar(30) not null,
+	content varchar(100) not null,
+	favorite int,
+	creator VARCHAR(255) NOT NULL,
+    created_at Timestamp NOT NULL,
+    updater VARCHAR(255) NOT NULL,
+    updated_at Timestamp NOT NULL,
+    version INT NOT NULL
+);

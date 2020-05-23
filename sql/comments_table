@@ -1,0 +1,13 @@
+CREATE TABLE comments(
+	comment_id serial primary key,
+	name varchar(30) not null,
+	content varchar(100) not null,
+	favorite int,
+	article_id int not null,
+	creator VARCHAR(255) NOT NULL,
+    created_at Timestamp NOT NULL,
+    updater VARCHAR(255) NOT NULL,
+    updated_at Timestamp NOT NULL,
+    version INT NOT NULL,
+	foreign key (article_id) references articles(article_id)
+);
